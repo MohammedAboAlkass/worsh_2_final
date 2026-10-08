@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvExitConfirmMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exit_confirm_message"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Green No Button (#388E3C) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExitNo"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="@string/btn_no"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:backgroundTint="#388E3C"
+            app:cornerRadius="10dp" />
+
+        <!-- Red Yes Button (#D32F2F) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExitYes"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="@string/btn_yes"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:backgroundTint="#D32F2F"
+            app:cornerRadius="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#1976D2</color>
+    <color name="primary_dark">#0D47A1</color>
+    <color name="primary_container">#BBDEFB</color>
+    <color name="on_primary_container">#0D47A1</color>
+    <color name="secondary">#00796B</color>
+
+    <color name="green_offer">#2E7D32</color>
+    <color name="green_offer_bg">#C8E6C9</color>
+    <color name="gray_no_offer">#616161</color>
+    <color name="gray_no_offer_bg">#E0E0E0</color>
+    <color name="red_out_of_stock">#D32F2F</color>
+
+    <color name="btn_yes_red">#D32F2F</color>
+    <color name="btn_no_green">#388E3C</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#212121</color>
+    <color name="gray_text">#757575</color>
+    <color name="background_light">#F5F7FA</color>
+</resources>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="4dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            app:contentInsetEnd="12dp"
+            app:contentInsetStart="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvToolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/btnOpenTables"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnOpenTables"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="12dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="0dp"
+                    android:text="@string/open_tables_btn"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:cornerRadius="19dp"
+                    app:icon="@drawable/ic_table"
+                    app:iconSize="18dp"
+                    app:iconTint="@color/white"
+                    app:strokeColor="#FFFFFF"
+                    app:strokeWidth="1dp" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Section 1: Single Product Details (Q1) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#D1D9E6"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_title"
+                        android:textColor="@color/primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="#E0E0E0" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!-- Product Image (Click opens dialog) -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="0dp"
+                            app:strokeColor="#CCCCCC"
+                            app:strokeWidth="1dp">
+
+                            <ImageView
+                                android:id="@+id/ivDetailImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#F9FAFC"
+                                android:clickable="true"
+                                android:contentDescription="@string/main_title"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:padding="12dp"
+                                android:src="@drawable/ic_product_placeholder" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Product Name (Long click copies to clipboard) -->
+                            <TextView
+                                android:id="@+id/tvDetailName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:textColor="@color/black"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                tools:text="اسم المنتج" />
+
+                            <!-- Product Quantity -->
+                            <TextView
+                                android:id="@+id/tvDetailQuantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:textSize="14sp"
+                                tools:text="الكمية المتوفرة: 10" />
+
+                            <!-- Offer Status Badge -->
+                            <TextView
+                                android:id="@+id/tvDetailOffer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:background="@drawable/bg_offer_active"
+                                android:paddingStart="10dp"
+                                android:paddingTop="3dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="3dp"
+                                android:textColor="@color/green_offer"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                tools:text="عليه عرض" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Product List Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/title_product_list"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- RecyclerView for Alphabetical Products List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="80dp"
+                android:clipToPadding="false"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_product" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Floating Action Button (FAB) to Add New Product via Pop-up -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/add_product"
+        app:backgroundTint="@color/primary"
+        app:tint="@color/white"
+        app:srcCompat="@drawable/ic_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

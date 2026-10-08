@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تطبيق المنتجات</string>
+
+    <!-- Q1 & Q2 Strings -->
+    <string name="main_title">تفاصيل المنتج</string>
+    <string name="title_product_list">قائمة المنتجات (أبجدياً)</string>
+    <string name="copied_to_clipboard">تم النسخ</string>
+    <string name="out_of_stock">نفدت الكمية</string>
+    <string name="quantity_available">الكمية المتوفرة: %1$d</string>
+    <string name="on_offer">عليه عرض</string>
+    <string name="no_offer">ليس عليه عرض</string>
+    <string name="add_product">إضافة منتج</string>
+    <string name="open_tables_btn">جدول الضرب</string>
+    <string name="dialog_add_title">إضافة منتج جديد</string>
+    <string name="hint_product_name">اسم المنتج</string>
+    <string name="hint_product_quantity">الكمية المتوفرة</string>
+    <string name="cb_on_offer_label">المنتج عليه عرض خاص</string>
+    <string name="btn_save">حفظ</string>
+    <string name="btn_cancel">إلغاء</string>
+    <string name="error_fill_fields">يرجى إدخال الاسم والكمية</string>
+
+    <string name="close">إغلاق</string>
+
+    <!-- Q3 Strings -->
+    <string name="tables_title">جدول الضرب</string>
+    <string name="table_header">جدول العدد %1$d</string>
+    <string name="page_indicator">الصفحة %1$d من %2$d</string>
+
+    <!-- Q4 Strings (Arabic) -->
+    <string name="exit_confirm_message">هل تريد تأكيد الخروج؟</string>
+    <string name="btn_yes">نعم</string>
+    <string name="btn_no">لا</string>
+</resources>
